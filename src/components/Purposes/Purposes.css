@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+.purposes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: 0 100px;
+  margin-bottom: 85px;
+}
+@media screen and (max-width: 1024px) {
+  .purposes {
+    padding: 0 5%;
+  }
+}
+.purposes__list {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(66, 74, 87, 0.5);
+  column-gap: 32px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44px;
+}
+@media screen and (max-width: 1024px) {
+  .purposes__list {
+    flex-wrap: wrap;
+    border: none;
+    gap: 10px;
+  }
+}
+.purposes__list .purpose {
+  color: rgba(66, 74, 87, 0.5);
+  cursor: pointer;
+}
+.purposes__list .purpose_active {
+  color: #0096a7;
+  border-bottom: 1px solid #0096a7;
+  margin-bottom: -1px;
+}
+.purposes .purpose__description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/*# sourceMappingURL=Purposes.css.map */

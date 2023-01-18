@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+.about {
+  width: 100%;
+  color: #424a57;
+  padding: 0 100px;
+}
+@media screen and (max-width: 1024px) {
+  .about {
+    padding: 0 5%;
+  }
+}
+.about__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 85px;
+  gap: 32px;
+}
+@media screen and (max-width: 1024px) {
+  .about__list {
+    justify-content: center;
+  }
+}
+.about__item {
+  width: 400px;
+}
+.about__img {
+  margin-bottom: 32px;
+}
+.about__name {
+  margin-bottom: 24px;
+}
+.about__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/*# sourceMappingURL=About.css.map */

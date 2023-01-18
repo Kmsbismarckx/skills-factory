@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #424a57;
+  height: 144px;
+  padding: 0 100px;
+  color: white;
+}
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 100px;
+    padding: 0 5%;
+  }
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  z-index: 2;
+  background-color: inherit;
+}
+.header__logo {
+  width: 190.2px;
+  height: 32px;
+  z-index: 3;
+}
+.header__links {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44px;
+  column-gap: 32px;
+  z-index: 3;
+  transition: all 300ms ease-out;
+}
+@media screen and (max-width: 1024px) {
+  .header__links {
+    display: none;
+  }
+}
+.header__links_active {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #0096a7;
+  flex-direction: column;
+  justify-content: start;
+  background-color: #424a57;
+  z-index: 2;
+  padding: 146px 100px 50px;
+  row-gap: 32px;
+  transition: all 300ms ease-out;
+}
+.header .burger {
+  display: none;
+  position: relative;
+  width: 45px;
+  height: 45px;
+  z-index: 3;
+}
+@media screen and (max-width: 1024px) {
+  .header .burger {
+    display: flex;
+  }
+}
+.header .burger::before, .header .burger::after {
+  content: "";
+  position: absolute;
+  background-color: #0096a7;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  transition: all 300ms ease-out;
+}
+.header .burger::before {
+  top: 0;
+}
+.header .burger::after {
+  bottom: 0;
+}
+.header .burger span {
+  display: inline-block;
+  position: absolute;
+  background-color: #0096a7;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  top: calc(50% - 1.5px);
+  transition: all 300ms ease-out;
+}
+.header .burger_active::before {
+  transform: rotate(-45deg);
+  top: calc(50% - 3px);
+}
+.header .burger_active::after {
+  transform: rotate(45deg);
+  bottom: 50%;
+}
+.header .burger_active span {
+  transform: scale(0);
+}
+
+/*# sourceMappingURL=Header.css.map */

@@ -1,0 +1,44 @@
+@import "../../styles/variables";
+
+.purposes {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  padding: $page_padding;
+  margin-bottom: 85px;
+  @media screen and (max-width: 1024px) {
+    padding: $mobile_padding;
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid rgba(66, 74, 87, 0.5);
+    column-gap: 32px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 44px;
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      border: none;
+      gap: 10px;
+    }
+    .purpose {
+      color: rgba(66, 74, 87, 0.5);
+      cursor: pointer;
+    }
+    .purpose_active {
+      color: $side_color;
+      border-bottom: 1px solid $side_color;
+      margin-bottom: -1px;
+    }
+  }
+  .purpose__description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+}

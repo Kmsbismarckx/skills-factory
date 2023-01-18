@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+
+.about {
+  width: 100%;
+  color: $main_color;
+  padding: $page_padding;
+  @media screen and (max-width: 1024px) {
+    padding: $mobile_padding;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 85px;
+    gap: 32px;
+    @media screen and (max-width: 1024px) {
+      justify-content: center;
+    }
+  }
+  &__item {
+    width: 400px;
+  }
+  &__img {
+    margin-bottom: 32px;
+  }
+  &__name {
+    margin-bottom: 24px;
+  }
+  &__description {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(0, 0, 0, 0.87);
+  }
+}

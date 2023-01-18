@@ -1,0 +1,108 @@
+@import "../../styles/variables";
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $main_color;
+  height: 144px;
+  padding: $page_padding;
+  color: white;
+  @media screen and (max-width: 1024px) {
+    height: 100px;
+    padding: $mobile_padding;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    z-index: 2;
+    background-color: inherit;
+  }
+  &__logo {
+    width: 190.2px;
+    height: 32px;
+    z-index: 3;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 44px;
+    column-gap: 32px;
+    z-index: 3;
+    transition: all 300ms ease-out;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
+  &__links_active {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: $side_color;
+    flex-direction: column;
+    justify-content: start;
+    background-color: $main_color;
+    z-index: 2;
+    padding: 146px 100px 50px;
+    row-gap: 32px;
+    transition: all 300ms ease-out;
+  }
+  .burger {
+    display: none;
+    @media screen and (max-width: 1024px) {
+      display: flex;
+    }
+    position: relative;
+    width: 45px;
+    height: 45px;
+    z-index: 3;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: $side_color;
+      width: 100%;
+      height: 3px;
+      left: 0;
+      transition: all 300ms ease-out;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    span {
+      display: inline-block;
+      position: absolute;
+      background-color: $side_color;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      top: calc(50% - 1.5px);
+      transition: all 300ms ease-out;
+    }
+  }
+  .burger_active {
+    &::before {
+      transform: rotate(-45deg);
+      top: calc(50% - 3px);
+    }
+    &::after {
+      transform: rotate(45deg);
+      bottom: calc(50%);
+    }
+    span {
+      transform: scale(0);
+    }
+  }
+}

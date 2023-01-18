@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;300;400&family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap");
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 144px;
+  width: 100%;
+  padding: 0 100px;
+  background-color: rgba(66, 74, 87, 0.5);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44px;
+  color: white;
+}
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 0 5%;
+  }
+}
+.footer .societies {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 24px;
+}
+.footer .society {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=Footer.css.map */
